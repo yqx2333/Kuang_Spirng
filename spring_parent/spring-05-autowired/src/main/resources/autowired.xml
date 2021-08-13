@@ -1,21 +1,3 @@
-SpringIOC xml配置文件
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-   <!--bean就是java对象 , 由Spring创建和管理-->
-   <bean id="hello" class="com.kuang.pojo.Hello">
-       <property name="name" value="Spring"/>
-   </bean>
-
-</beans>
-```
-
-Spring支持注解 xml文件
-```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -27,5 +9,20 @@ Spring支持注解 xml文件
         https://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/aop
         https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 使用注解的方式 必须要配置支持注解 -->
+    <context:annotation-config />
+
+    <bean class="com.yqx.pojo.Dog" id="dog1" />
+    <bean class="com.yqx.pojo.Dog" id="dog2" />
+
+    <bean class="com.yqx.pojo.Cat" id="cat1" />
+    <bean class="com.yqx.pojo.Cat" id="cat2" />
+
+
+
+    <bean class="com.yqx.pojo.People" id="people"/>
+
+
+
 </beans>
-```

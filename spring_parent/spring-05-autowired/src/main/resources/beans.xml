@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 显示装配 -->
+    <!--<bean class="com.yqx.pojo.Cat" name="cat" />
+    <bean class="com.yqx.pojo.Dog" name="dog" />
+    <bean class="com.yqx.pojo.People" name="people">
+        <property name="name" value="张三" />
+        <property name="cat" ref="cat"/>
+        <property name="dog" ref="dog"/>
+    </bean>-->
+
+    <!-- 隐式装配 -->
+    <!--
+        byName 按照名称进行自动装配
+            使用限制: 不能随便其别名了,name必须和字段名保持一直;
+        byType 按照类型进行自动装配 [id也可以省略]
+            使用限制: 属性值必须全局唯一,否则空指针,set不进去;
+     -->
+    <!--<bean class="com.yqx.pojo.Cat" name="cat" />
+    <bean class="com.yqx.pojo.Dog" name="dog" />
+    <bean class="com.yqx.pojo.People" name="people" autowire="byName">
+        <property name="name" value="张三" />
+    </bean>-->
+
+</beans>

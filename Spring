@@ -113,6 +113,76 @@ Bean Scope Bean的作用域
 
 =========================================================================================
 
+Bean的自动装配 AutoWired
+    自动装配是Spring满足Bean依赖的一种方式;
+    Spring会在上下文中自动寻找Bean,自动给Bean装配属性!
+
+Spring中三种装配的方式
+    1. 在xml中显示中配置;
+    2. 在java中显示配置;
+    3. 隐式自动装配Bean[重要];
+        byName 按照名称进行自动装配
+            使用限制: 需要保证所有的bean的id唯一,不能随便其别名了,name必须和字段名保持一致;
+        byType 按照类型进行自动装配 [id也可以省略]
+            使用限制: 属性值必须全局唯一,否则空指针,set不进去;
+
+使用注解方式实现自动装配
+    使用注解须知:
+        1. 导入约束;
+            xmlns:context="http://www.springframework.org/schema/context"
+        2. 配置注解的支持; -> xml文件 -> context约束;
+@Autowired
+    可以直接在属性上使用,也可以在set方法上使用;
+    使用@Autowired就可以省略set方法了,前提是这个自动装配的属性在IOC(Spring容器中存在),且符合名字 byName;
+        @Autowired(required=false) 说明这个对象可以为null
+@Nullable
+    字段标记这个注解之后,代表该字段可以为null,且不报错;
+@Qualifier(value="bean的id")
+    当自动装配无法实现时(有多个对象 不知道该装配哪一个对象的时候)
+    可以使用@Qualifier注解 value值为bean的id,只要id在Spring容器中存在,那么就可以装配成功;
+@Resource
+    Java的原生注解,在annotation包下; 与@Autowired作用相同,但更加高级;
+    先去按照name进行注入,再按照类型进行注入;还可以使用 @Resource(name="xxx")进行注入;
+    比较:
+        @Autowired  通过byType的方式实现自动装配;而且必须要求这个对象存在;
+
+        @Resource   默认按照byName方式去做,如果找不到名字,则按照byType去实现装配;如果都找不到就报错;
+
+如果@Autowired自动装配环境比较复杂,自动装配无法通过一个注解 [@Autowired]完成的时候
+可以使用@Qualfier(value="xxx")去配置@Autowired使用,指定一个唯一的Bean对象;
+
+=========================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

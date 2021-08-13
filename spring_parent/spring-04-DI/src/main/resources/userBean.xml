@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- DI -> 依赖注入 -->
+    <!-- 通过p标签方式注入 也就相当于set注入 对于的是properties -->
+    <bean class="com.yqx.pojo.User" name="userP" p:name="张三" p:age="18" />
+
+    <!-- 通过c标签方式注入, 也就是通过构造器的方式注入 -->
+    <bean class="com.yqx.pojo.User" name="userC" c:name="法外狂徒" c:age="999" />
+
+
+</beans>

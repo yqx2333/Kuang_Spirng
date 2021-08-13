@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
@@ -58,7 +60,7 @@
             <null />
         </property>
 
-        <!-- 第七种 properties类型注入 -->
+        <!-- 第七种 properties类型注入 也就是key=value方式注入 -->
         <property name="info">
             <props>
                 <prop key="学号">2333</prop>
@@ -67,5 +69,9 @@
         </property>
     </bean>
 
+    <bean class="com.yqx.pojo.Person" name="person p1 p2 p3 person2">
+        <property name="name" value="张三" />
+        <property name="age" value="18" />
+    </bean>
 
 </beans>

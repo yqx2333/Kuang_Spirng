@@ -177,6 +177,21 @@ Spring中三种装配的方式
     <context:component-scan base-package="com.yqx.pojo" />
     <context:annotation-config />
 
+完全使用Java方式配置Spring
+    不适用Spring的xml配置,全部交给Java来做;
+
+@Configuration
+    @Configuration
+    @ComponentScan("com.yqx")
+    @Import(BeansConfig.class)
+    public class BeansConfig {
+        @Bean
+        public User getUser(){
+            return new User("张三");
+        }
+    }
+    new AnnotationConfigApplicationContext(BeansConfig.class);
+    context.getBean("getUser",User.class);  根据方法名获取Bean对象
 =========================================================================================
 
 

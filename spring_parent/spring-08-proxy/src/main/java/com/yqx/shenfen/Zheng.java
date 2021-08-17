@@ -21,7 +21,7 @@ public class Zheng {
         headers.put("Authorization", "APPCODE " + appcode);
         Map<String, String> querys = new HashMap<String, String>();
         querys.put("cardno", "");
-        querys.put("name", "樊振玺");
+        querys.put("name", "于清晰");
 
 
         try {

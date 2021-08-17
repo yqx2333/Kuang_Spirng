@@ -16,7 +16,7 @@
 
 
     <!-- 交给Spring去做 -->
-    <!--<mappers>
+   <!-- <mappers>
         <mapper class="com.yqx.mapper.UserMapper" />
     </mappers>-->
 </configuration>

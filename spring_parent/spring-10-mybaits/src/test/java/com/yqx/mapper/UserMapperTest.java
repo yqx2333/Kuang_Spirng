@@ -39,4 +39,11 @@ public class UserMapperTest {
 
     }
 
+    @Test
+    public void testPerson(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
+        UserMapper personMapper = context.getBean("personMapper", UserMapper.class);
+        personMapper.select().forEach(System.out::println);
+
+    }
 }

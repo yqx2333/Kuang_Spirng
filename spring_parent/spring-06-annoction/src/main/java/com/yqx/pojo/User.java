@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-// 等价于  <bean class="com.yqx.pojo.User" id="user" /> 但需要先配置扫描包扫描
+// 等价于  <bean class="com.yqx.pojo.User" id="com.yqx.user" /> 但需要先配置扫描包扫描
 @Component
 public class User {
 

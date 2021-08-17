@@ -16,7 +16,7 @@
     <!-- 使用注解的方式 必须要配置支持注解 -->
     <context:annotation-config />
 
-    <!--<bean class="com.yqx.pojo.User" id="user" />-->
+    <!--<bean class="com.yqx.pojo.User" id="com.yqx.user" />-->
 
 
 

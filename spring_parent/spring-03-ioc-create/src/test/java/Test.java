@@ -1,4 +1,4 @@
-import com.yqx.pojo.User;
+import com.trans.pojo.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

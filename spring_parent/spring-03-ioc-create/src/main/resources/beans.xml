@@ -5,26 +5,26 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- 1. 无参构造方法创建对象 -->
-    <!--<bean class="com.yqx.pojo.User" id="com.yqx.user">
+    <!--<bean class="com.trans.pojo.User" id="com.trans.user">
         <property name="name" value="zhangsan" />
     </bean>-->
 
     <!-- 2. 有参构造方法创建对象 需要使用到构造器 -->
-    <!--<bean class="com.yqx.pojo.User" id="com.yqx.user">
+    <!--<bean class="com.trans.pojo.User" id="com.trans.user">
         &lt;!&ndash; index为下标索引 value为具体的值 &ndash;&gt;
         <constructor-arg index="0" value="我也不知道"/>
     </bean>-->
 
     <!-- 3. 有参构造方法创建对象 通过参数类型进行创建
             不建议使用 如果参数全部是String类型 该如何是好? -->
-    <!--<bean class="com.yqx.pojo.User" id="com.yqx.user">
+    <!--<bean class="com.trans.pojo.User" id="com.trans.user">
         <constructor-arg type="java.lang.String" value="String类型" />
     </bean>-->
 
     <!-- 4. 通过 -->
     <!-- id  bean的唯一标识符,也相当于别名
          class-->
-    <bean class="com.yqx.pojo.User" id="com.yqx.user">
+    <bean class="com.trans.pojo.User" id="com.yqx.user">
         <constructor-arg name="name" value="通过name方式传入" />
     </bean>
 

@@ -13,15 +13,15 @@
     <!-- 使用注解的方式 必须要配置支持注解 -->
     <context:annotation-config />
 
-    <bean class="com.yqx.pojo.Dog" id="dog1" />
-    <bean class="com.yqx.pojo.Dog" id="dog2" />
+    <bean class="com.trans.pojo.Dog" id="dog1" />
+    <bean class="com.trans.pojo.Dog" id="dog2" />
 
-    <bean class="com.yqx.pojo.Cat" id="cat1" />
-    <bean class="com.yqx.pojo.Cat" id="cat2" />
+    <bean class="com.trans.pojo.Cat" id="cat1" />
+    <bean class="com.trans.pojo.Cat" id="cat2" />
 
 
 
-    <bean class="com.yqx.pojo.People" id="people"/>
+    <bean class="com.trans.pojo.People" id="people"/>
 
 
 

@@ -8,10 +8,10 @@
 
     <!-- DI -> 依赖注入 -->
     <!-- 通过p标签方式注入 也就相当于set注入 对于的是properties -->
-    <bean class="com.yqx.pojo.User" name="userP" p:name="张三" p:age="18" />
+    <bean class="com.trans.pojo.User" name="userP" p:name="张三" p:age="18" />
 
     <!-- 通过c标签方式注入, 也就是通过构造器的方式注入 -->
-    <bean class="com.yqx.pojo.User" name="userC" c:name="法外狂徒" c:age="999" />
+    <bean class="com.trans.pojo.User" name="userC" c:name="法外狂徒" c:age="999" />
 
 
 </beans>

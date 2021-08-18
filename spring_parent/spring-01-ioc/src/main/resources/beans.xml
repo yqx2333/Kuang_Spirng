@@ -6,11 +6,11 @@
 
     <!-- xml 这个就可以理解为一个容器 -->
     <!-- 配置容器dao层 -->
-    <bean class="com.yqx.dao.impl.UserMySqlImpl" id="mysqlImpl" />
-    <bean class="com.yqx.dao.impl.UserOracleImpl" id="oracleImpl" />
+    <bean class="com.trans.dao.impl.UserMySqlImpl" id="mysqlImpl" />
+    <bean class="com.trans.dao.impl.UserOracleImpl" id="oracleImpl" />
 
     <!-- 主要业务逻辑都是在Service层实现的 配置Service -->
-    <bean class="com.yqx.service.impl.UserServiceImpl" id="userServiceImpl">
+    <bean class="com.trans.service.impl.UserServiceImpl" id="userServiceImpl">
         <!-- 成员变量也要同时配置 -->
         <!-- ref -> 引用(指向)Spring容器中创建好的对象
             value -> 基本数据类型,代表具体的值 -->

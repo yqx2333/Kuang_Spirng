@@ -34,12 +34,12 @@
     </bean>
 
     <!-- 将mapper实现类注入到spring中 -->
-    <bean class="com.yqx.mapper.impl.UserMapperImpl" id="userMapper" >
+    <bean class="com.trans.mapper.impl.UserMapperImpl" id="userMapper" >
         <property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
     </bean>
 
     <!-- 第二种方式注入 extends SqlSessionDaoSupport -->
-    <bean class="com.yqx.mapper.impl.PersonMapperImpl" id="personMapper">
+    <bean class="com.trans.mapper.impl.PersonMapperImpl" id="personMapper">
         <property name="sqlSessionFactory" ref="sqlSessionFactory" />
     </bean>
 

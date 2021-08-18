@@ -1,4 +1,4 @@
-import com.yqx.pojo.Hello;
+import com.trans.pojo.Hello;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

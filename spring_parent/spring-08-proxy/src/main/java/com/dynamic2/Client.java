@@ -1,7 +1,5 @@
 package com.dynamic2;
 
-import com.yqx.dongtai.UserService;
-
 /**
  * @author fanzx
  * @create 2021/8/17 14:32

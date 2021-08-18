@@ -11,12 +11,12 @@
         https://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- 扫描包注解 指定扫描的包,这个包下的注解就会实现 -->
-    <context:component-scan base-package="com.yqx.pojo" />
+    <context:component-scan base-package="com.trans.pojo" />
 
     <!-- 使用注解的方式 必须要配置支持注解 -->
     <context:annotation-config />
 
-    <!--<bean class="com.yqx.pojo.User" id="com.yqx.user" />-->
+    <!--<bean class="com.trans.pojo.User" id="com.trans.user" />-->
 
 
 

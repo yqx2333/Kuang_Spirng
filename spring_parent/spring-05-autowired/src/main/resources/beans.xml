@@ -11,9 +11,9 @@
         https://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- 显示装配 -->
-    <!--<bean class="com.yqx.pojo.Cat" name="cat" />
-    <bean class="com.yqx.pojo.Dog" name="dog" />
-    <bean class="com.yqx.pojo.People" name="people">
+    <!--<bean class="com.trans.pojo.Cat" name="cat" />
+    <bean class="com.trans.pojo.Dog" name="dog" />
+    <bean class="com.trans.pojo.People" name="people">
         <property name="name" value="张三" />
         <property name="cat" ref="cat"/>
         <property name="dog" ref="dog"/>
@@ -26,9 +26,9 @@
         byType 按照类型进行自动装配 [id也可以省略]
             使用限制: 属性值必须全局唯一,否则空指针,set不进去;
      -->
-    <!--<bean class="com.yqx.pojo.Cat" name="cat" />
-    <bean class="com.yqx.pojo.Dog" name="dog" />
-    <bean class="com.yqx.pojo.People" name="people" autowire="byName">
+    <!--<bean class="com.trans.pojo.Cat" name="cat" />
+    <bean class="com.trans.pojo.Dog" name="dog" />
+    <bean class="com.trans.pojo.People" name="people" autowire="byName">
         <property name="name" value="张三" />
     </bean>-->
 

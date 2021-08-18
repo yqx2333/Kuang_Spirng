@@ -1,7 +1,5 @@
 package com.proxy.dongtai;
 
-import com.yqx.dongtai.UserService;
-
 /**
  * @author fanzx
  * @create 2021/8/17 11:30

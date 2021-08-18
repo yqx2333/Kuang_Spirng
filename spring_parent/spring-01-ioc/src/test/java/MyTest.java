@@ -1,4 +1,4 @@
-import com.yqx.service.impl.UserServiceImpl;
+import com.trans.service.impl.UserServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

@@ -1,0 +1,16 @@
+SpringMVC入门
+核心学习内容: SpringMVC执行流程和SSM框架整合;
+
+1. 什么是mvc
+    M: 模型 dao service
+    V: 视图 jsp
+    C: 控制器 servlet  (所有控制器底层都是Servlet) <br />
+        dao层连接数据库 -> service只负责业务 -> servlet接收前端数据
+        servlet接收前端数据 -> 交给service处理 -> 跳转页面(转发 和重定向)
+
+前端 -> 数据传输 -> 实体类
+    如果是一个登录页面,我们只需要username和password,假如前端传过来很多字段都是没用的,
+    这个时候我们就可以创建UserVo,里面只写上要接受的字段即可; UserVo和User两个实体类是互不干扰的;
+
+JSP本质就是一个Servlet;早期开发是使用JSP
+ 

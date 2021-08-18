@@ -1,5 +1,4 @@
 import com.trans.mapper.UserMapper;
-import com.trans.mapper.UserMapperImpl;
 import com.trans.pojo.User;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -15,10 +14,17 @@ public class UserTest {
 
     @Test
     public void test1(){
-        ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
-        UserMapper uuuuser = context.getBean("uuuuser", UserMapper.class);
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserMapper uuuuser = context.getBean("u1", UserMapper.class);
         List<User> users = uuuuser.selectUser();
         System.out.println(users);
+    }
+
+    @Test
+    public void test2(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserMapper u2 = context.getBean("u2", UserMapper.class);
+        u2.selectUser().forEach(System.out::println);
     }
 
 

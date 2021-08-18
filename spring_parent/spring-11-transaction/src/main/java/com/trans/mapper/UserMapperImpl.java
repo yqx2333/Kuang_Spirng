@@ -25,4 +25,14 @@ public class UserMapperImpl implements UserMapper {
         mapper.selectUser().forEach(System.out::println);
         return mapper.selectUser();
     }
+
+    @Override
+    public int addUser(User user) {
+        return 0;
+    }
+
+    @Override
+    public int deleteUser(Integer id) {
+        return 0;
+    }
 }

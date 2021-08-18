@@ -1,15 +1,17 @@
-<?xml version="1.0" encoding="UTF8"?>
+<?xml version="1.0" encoding="UTF8" ?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/context
-        https://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/aop
-        https://www.springframework.org/schema/aop/spring-aop.xsd">
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx
+        https://www.springframework.org/schema/tx/spring-tx.xsd">
 
+    <!-- application.xml中只保存数据库连接 -->
     <!-- datasource 数据库连接源 使用Spring数据源替换MyBatis配置-->
     <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -33,9 +35,35 @@
         <constructor-arg index="0" ref="sqlSessionFactory" />
     </bean>
 
-    <!-- 将mapper实现类注入到spring中 -->
-    <bean class="com.trans.mapper.UserMapperImpl" id="uuuuser" >
-        <property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
+    <!-- 配置Spring声明式事务 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="datasource" />
     </bean>
+
+    <!-- 结合aop实现事务的植入 -->
+    <!-- 配置事务通知 -->
+    <tx:advice id="interceptor" transaction-manager="transactionManager">
+        <!-- 给那些方法配置事务 -->
+        <!-- 配置事务的传播特性 -->
+        <tx:attributes>
+            <!-- 给那些方法配置事务 -->
+            <tx:method name="add" propagation="REQUIRED"/>
+            <tx:method name="delete"/>
+            <tx:method name="update"/>
+            <tx:method name="query" read-only="true"/>
+            <tx:method name="select" read-only="true"/>
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+    
+    <!-- 配置事务切入 -->
+    <aop:config>
+        <!-- 切入点 -->
+        <aop:pointcut id="pointcut" expression="execution(* com.trans.mapper.*.*(..))"/>
+        <!-- 面向切面编程时使用aop:aspect  面向事务时使用aop:advisor -->
+        <!-- 定义通知器 切入 -->
+        <aop:advisor advice-ref="interceptor" pointcut-ref="pointcut" />
+    </aop:config>
+
 
 </beans>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- application.xml中只保存数据库连接 -->
+    <import resource="application.xml" />
+
+    <!-- 将mapper实现类注入到spring中 -->
+    <bean class="com.trans.mapper.UserMapperImpl" id="u1" >
+        <property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
+    </bean>
+
+    <!-- 第二种方式 通过集成SqlDao -->
+    <bean class="com.trans.mapper.UserMapperTwo" id="u2" >
+        <property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
+    </bean>
+
+</beans>

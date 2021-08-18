@@ -13,4 +13,98 @@ SpringMVC入门
     这个时候我们就可以创建UserVo,里面只写上要接受的字段即可; UserVo和User两个实体类是互不干扰的;
 
 JSP本质就是一个Servlet;早期开发是使用JSP
- 
+在web项目中,如果为了安全,可以把页面放在WEB-INF中,对用户不可见;公共页面可以放在web包下;
+=====================================================================================
+MVC框架要做的事情
+    1. 将url映射到java类或者java类的方法;
+    2. 封装用户提供的数据;
+    3. 处理请求 -> 调用相关的业务处理 -> 封装响应数据;
+    4. 将响应数据进行渲染 -> jsp/html等View表示层展示数据;
+    <servlet>
+        <servlet-name>helloServlet</servlet-name>
+        <servlet-class>com.yqx.servlet.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>helloServlet</servlet-name>
+        这里一定要注意 要添加 /
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+MVVM:
+    M V         VM -> ViewModel -> 双向绑定 -> vue学习;
+=====================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

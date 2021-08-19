@@ -115,7 +115,7 @@ SpringMVC执行流程
         HandlerMapping根据请求url查找对应的Handler;
     3. HandlerExecution表示具体的Handler,主要作用是根据url查找控制器;也就是对应的Controller;
     4. HandlerExecution将解析后的信息传递给DispatcherServlet,如解析控制器映射等;
-    5. HandlerAdapter表示处理器进行适配,按照特定的规则去执行Handler;
+    5. HandlerAdapter表示处理器进行适配,按照特定的规则去执行 Handler;
     6. Handler让具体的Controller执行;
     7. Controller(调用业务层)将己题的执行信息返回给HandlerAdapter,也就是ModelAndView;
     8. HandlerAdapter将视图逻辑名或者模型传递给DispatcherServlet;
@@ -200,7 +200,10 @@ SpringMVC Annotation开发;
                 return "hello";
             }
         }
-
+SpringMVC配置三大件:
+    处理器映射器 HandlerMapping;      <mvc:annotation-driven /> 这两个已经被该注解代替了
+    处理器适配器 HandlerAdapter;      <mvc:annotation-driven /> 只需要开启注解驱动即可;
+    视图解析器   ViewResolver;       只需要配置视图解析器;
 
 
 

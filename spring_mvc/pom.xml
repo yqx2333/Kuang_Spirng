@@ -14,7 +14,7 @@
         <module>springmvc-02-hellomvc2</module>
         <module>springmvc-02-myMvc</module>
         <module>springmvc-03-annotation</module>
-        <module>spring-03-myAnnotation</module>
+        <module>springmvc-03-myAnnotation</module>
     </modules>
 
     <properties>

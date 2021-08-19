@@ -205,6 +205,8 @@ SpringMVC配置三大件:
     处理器适配器 HandlerAdapter;      <mvc:annotation-driven /> 只需要开启注解驱动即可;
     视图解析器   ViewResolver;       只需要配置视图解析器;
 
+=====================================================================================
+
 @Controller注解
     使用这个注解的类中所有的方法,如果返回值是String,并且有具体页面可以跳转,那么就会被视图解析器解析;
 
@@ -223,6 +225,41 @@ SpringMVC也可以不配置视图解析器
         // 有视图解析器的情况下 想使用重定向 直接加上redirect即可;
         return "redirect:/index.jsp";
     }
+@RequestParam  设置别名
+    @GetMapping("/user2")
+    public String test2(@RequestParam("username") String name, Model model){
+        System.out.println("接收到前端参数为:" + name);
+        // 将返回的结果传递给前端
+        model.addAttribute("msg",name);
+        return "test";
+    }
+
+如果参数是一个实体类对象 该如何接收?
+    /**
+     * 如果前端传入的是一个对象?
+     * 接收前端用户传递的参数,判断参数的名字; 假设参数直接在方法上,就可以直接使用;
+     * 假设传递的是一个对象,那么就会匹配对象中的字段名;如果字段一致则ok,否则不能匹配;
+     * @return
+     */
+    @GetMapping("/user3")
+    public String test3(User user,Model model){
+        model.addAttribute("msg",user);
+        return "test";
+    }
+
+=====================================================================================
+
+数据如何显示到前端?
+    ModelAndView  Model
+    ModelMap:
+        1. LinkedHashMap
+           ModelMap: 继承LinkedHashMap;
+           Model:    精简版本 继承ModelMap;
+        2. 区别:
+            Model只有几个方法适用于存储数据,
+            ModelMap实现了LinkedHashMap,同样继承了LinkedMap的方法和特性;
+            ModelAndView可以在存储数据的同时,可以进行设置返回的逻辑规则,运行控制展示层的跳转;
+
 
 
 

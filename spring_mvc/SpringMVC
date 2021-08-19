@@ -208,7 +208,21 @@ SpringMVC配置三大件:
 @Controller注解
     使用这个注解的类中所有的方法,如果返回值是String,并且有具体页面可以跳转,那么就会被视图解析器解析;
 
+SpringMVC也可以不配置视图解析器
+    @GetMapping("/m1/t2")
+    public String test1(Model model){
+        model.addAttribute("msg","转发请求到指定页面上");
+        // 没有实体解析器的话 需要写全限定类名
+        return "forward:/WEB-INF/jsp/test.jsp";
+    }
 
+配置视图解析器的情况下想进行重定向:
+    @GetMapping("/m1/t3")
+    public String test3(Model model){
+        model.addAttribute("msg","转发请求到指定页面上");
+        // 有视图解析器的情况下 想使用重定向 直接加上redirect即可;
+        return "redirect:/index.jsp";
+    }
 
 
 

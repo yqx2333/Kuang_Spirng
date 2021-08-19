@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON练习</title>
+</head>
+
+    <script type="application/javascript">
+        // 编写一个JavaScript对象
+        var user = {
+            name: "张三",
+            age: 18,
+            sex: "未知"
+        }
+        // 将js对象转换成为json对象
+        var json = JSON.stringify(user);
+        console.log(json);
+        // 将JSON对象转换成为javascript?
+        var parse = JSON.parse(json);
+        console.log(parse)
+    </script>
+
+<body>
+
+</body>
+</html>

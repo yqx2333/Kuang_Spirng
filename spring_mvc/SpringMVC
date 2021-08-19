@@ -260,18 +260,109 @@ SpringMVC也可以不配置视图解析器
             ModelMap实现了LinkedHashMap,同样继承了LinkedMap的方法和特性;
             ModelAndView可以在存储数据的同时,可以进行设置返回的逻辑规则,运行控制展示层的跳转;
 
+=====================================================================================
+
+乱码问题:
+    题外话 -> 过滤器解决乱码问题;
+    1. 创建一个拦截器
+    @Override
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        servletRequest.setCharacterEncoding("utf-8");
+        servletResponse.setCharacterEncoding("utf-8");
+        // 继续执行代码
+        filterChain.doFilter(servletRequest,servletResponse);
+    }
+    2. 在配置文件中配置拦截器  ---> 结果 --> 没用
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>com.yqx.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <!-- 拦截所有请求 -->
+        <url-pattern>/</url-pattern>
+    </filter-mapping>
 
 
+    SpringMVC原生拦截器解决乱码
+        <!-- 配置过滤器 解决乱码问题 -->
+        <filter>
+            <filter-name>encoding</filter-name>
+            <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+            <init-param>
+                <param-name>encoding</param-name>
+                <param-value>utf-8</param-value>
+            </init-param>
+        </filter>
+        <filter-mapping>
+            <filter-name>encoding</filter-name>
+            <url-pattern>/</url-pattern>
+        </filter-mapping>
 
+=====================================================================================
 
+JSON:
+小复习:
+    <script type="application/javascript">
+        var user = {    // 编写一个JavaScript对象
+            name: "张三",
+            age: 18,
+            sex: "未知"
+        }
+        var json = JSON.stringify(user);    // 将js对象转换成为json对象
+        console.log(json);
+        var parse = JSON.parse(json);       // // 将JSON对象转换成为javascript
+        console.log(parse)
+    </script>
+Jackson包:
+    <!-- Jackson JSON包 -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.12.0</version>
+    </dependency>
 
+<!-- JSON乱码问题配置 -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg value="UTF-8" />
+            </bean>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="objectMapper">
+                    <bean class="org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean">
+                        <property name="failOnEmptyBeans" value="false" />
+                    </bean>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 
+@ResponseBody是配和Controller使用的,使用该注解后,不会走视图解析器,返回类型是字符串;
 
+=====================================================================================
 
+ObjectMapper解决时间为时间戳问题
+    @SneakyThrows
+    @ResponseBody
+    @RequestMapping("json3")
+    public String json3(){
+        // 使用纯Java去解决
+        // ObjectMapper时间解析后的默认格式为: TimeStomp
+        // SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        // return new ObjectMapper().writeValueAsString(simpleDateFormat.format(new Date()));
 
+        // 使用ObjectMapper解决时间
+        ObjectMapper mapper = new ObjectMapper();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        // 不适用时间戳格式
+        mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS,false);
+        // 将时间格式放入到mapper中
+        mapper.setDateFormat(simpleDateFormat);
+        return mapper.writeValueAsString(new Date());
+    }
 
-
-
+=====================================================================================
 
 
 

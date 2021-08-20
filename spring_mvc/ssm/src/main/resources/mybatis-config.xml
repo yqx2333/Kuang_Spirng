@@ -7,7 +7,9 @@
     <!-- 配置数据源 交给Spring去做 -->
 
     <!-- 设置别名 -->
-    <typeAliases name="com.yqx.pojo" />
+    <typeAliases>
+        <package name="com.yqx.pojo"/>
+    </typeAliases>
 
     <!-- mapper映射 -->
     <mappers>

@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.io.Serializable;
+
 /**
  * @author fanzx
  * @create 2021/8/20 10:57
@@ -13,7 +15,7 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Books {
+public class Books implements Serializable {
 
     private Integer bookId;
     private String bookName;

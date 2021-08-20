@@ -24,7 +24,7 @@
         <property name="dataSource" ref="datasource" />
         <!-- 绑定mybatis配置文件 -->
         <property name="configLocation" value="classpath:mybatis-config.xml" />
-        <property name="mapperLocations" value="classpath:com/yqx/mapper/UserMapper.xml" />
+        <property name="mapperLocations" value="classpath:com.ywc" />
     </bean>
 
     <!-- SqlSessionTemplate就是sqlSession -->

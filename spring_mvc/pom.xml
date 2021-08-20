@@ -19,6 +19,7 @@
         <module>springmvc-04-modelAndView</module>
         <module>springmvc-05-json</module>
         <module>ssm</module>
+        <module>springmvc-06-ajax</module>
     </modules>
 
     <properties>

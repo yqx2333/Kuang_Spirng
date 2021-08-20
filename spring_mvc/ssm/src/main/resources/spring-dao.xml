@@ -10,7 +10,7 @@
     <!-- spring连接dao层 主要是数据库连接 -->
 
     <!-- 关联数据库配置文件 -->
-    <context:property-placeholder location="database.properties" />
+    <context:property-placeholder location="classpath:database.properties" />
 
     <!-- 连接池 dbcp c3p0 Druid  -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">

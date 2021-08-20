@@ -12,8 +12,8 @@
         http://www.springframework.org/schema/mvc
         https://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!-- Spring核心配置文件 -->
-
-
-
+    <import resource="spring-dao.xml" />
+    <import resource="spring-mvc.xml" />
+    <import resource="spring-service.xml" />
 
 </beans>

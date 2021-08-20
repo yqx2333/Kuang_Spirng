@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iframe页面无刷新</title>
+    <script>
+        function goUrl(){
+            var url = document.getElementById("url").value;
+            document.getElementById("windows").src=url;
+        }
+    </script>
+</head>
+<body>
+
+<div>
+    <p>请输入地址:</p>
+    <p>
+        <input type="text" id="url" value="https://www.bilibili.com/video/BV1aE41167Tu?p=24">
+        <input type="button" value="提交" onclick="goUrl()">
+    </p>
+</div>
+
+<div>
+    <iframe id="windows" style="width: 100%;height: 80%"></iframe>
+</div>
+
+</body>
+</html>

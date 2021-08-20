@@ -24,6 +24,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-04-controller/springmvc-04-controller.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-04-controller/springmvc-04-controller.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-04-modelAndView/springmvc-04-modelAndView.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-04-modelAndView/springmvc-04-modelAndView.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-05-json/springmvc-05-json.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-05-json/springmvc-05-json.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-06-ajax/springmvc-06-ajax.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-06-ajax/springmvc-06-ajax.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/ssm/ssm.iml" filepath="$PROJECT_DIR$/spring_mvc/ssm/ssm.iml" />
     </modules>
   </component>

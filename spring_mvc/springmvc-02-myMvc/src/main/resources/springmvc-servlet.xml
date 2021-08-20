@@ -17,6 +17,6 @@
     </bean>
 
     <!-- 将controller注入到Spring中 id为要跳转的路径 -->
-    <bean class="com.yqx.controller.UserController" id="/userTest" />
+    <bean class="com.yqx.controller.BooksController" id="/userTest" />
 
 </beans>

@@ -124,6 +124,7 @@ Spring整合MyBatis application.xml文件
 </beans>
 ```
 
+
 ###SpringMVC
 web.xml文件
 ````xml
@@ -203,6 +204,20 @@ SpringMVC -> JSON乱码问题配置
 ```
 
 
+###SSM整合
+mybatis核心配置文件
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 配置数据源 交给Spring去做 -->
+    <!-- 设置别名 -->
+    <typeAliases name="com.yqx.pojo" />
+    <!-- mapper映射 -->
+</configuration>
+```
 
 
 

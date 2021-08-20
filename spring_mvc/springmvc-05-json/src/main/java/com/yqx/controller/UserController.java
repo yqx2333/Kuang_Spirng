@@ -1,5 +1,6 @@
 package com.yqx.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -67,4 +68,20 @@ public class UserController {
         mapper.setDateFormat(simpleDateFormat);
         return mapper.writeValueAsString(new Date());
     }
+
+    @RequestMapping("fastJson1")
+    public String fastJson1(){
+        User user1 = new User("张三", 123, "未知");
+        User user2 = new User("张三", 123, "未知");
+        User user3 = new User("张三", 123, "未知");
+        User user4 = new User("张三", 123, "未知");
+        List<User> users = Arrays.asList(user1, user2, user3, user4);
+        String string = JSON.toJSONString(users);
+        return string;
+    }
+
+
+
+
 }
+

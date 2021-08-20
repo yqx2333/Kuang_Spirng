@@ -364,10 +364,17 @@ ObjectMapper解决时间为时间戳问题
 
 =====================================================================================
 
+FastJson
+    Java对象转JSON字符串: JSON.toJSONString();
+    JSON字符串转Java对象: JSON.parseObject(str,User.class);
+    Java对象转JSON对象: JSON.toJSON(user);
+    JSON对象转Java对象: JSON.toJavaObject(jsonObject,User.class);
 
+=====================================================================================
 
-
-
+SpringMVC整合
+开始:
+    需求分析 -> 设计数据库 -> 业务逻辑 -> 前端页面;
 
 
 

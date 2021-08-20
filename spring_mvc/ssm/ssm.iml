@@ -6,6 +6,15 @@
         <fileset id="fileset" name="ApplicationContext" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
         </fileset>
+        <fileset id="fileset2" name="Spring Dao" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/spring-dao.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
+        </fileset>
+        <fileset id="fileset3" name="Spring Service" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/spring-service.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-dao.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>

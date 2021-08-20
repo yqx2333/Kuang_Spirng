@@ -1,0 +1,249 @@
+# my global config
+global:
+  scrape_interval:    15s
+  evaluation_interval: 15s
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          - 10.20.12.55:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  - "/home/cmp/prometheus/rules/*.yml"
+  - "/home/cmp/prometheus/record_rules/*.yml"
+
+scrape_configs:
+  # blackbox_exporter
+  - job_name: 'blackbox'
+    scrape_interval: 60s
+    static_configs:
+      - targets: ['10.20.12.55:9115']
+
+  - job_name: 'blackbox_probe'
+    metrics_path: /probe
+    params:
+      module: [icmp]
+    scrape_interval: 30s
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/blackbox/*.json']
+        refresh_interval: 5m
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 10.20.12.55:9115
+
+  # telegraf
+  - job_name: 'telegraf'
+    scrape_interval: 60s
+    scrape_timeout: 60s
+    static_configs:
+      - targets: ['10.20.12.55:9273']
+    metric_relabel_configs:
+    - regex: 'dcname|clustername|instance|moid|host|guest|guesthostname'
+      action: labeldrop
+
+  # bocloud-exporter
+  - job_name: 'bocloud-exporter'
+    metrics_path: /metrics
+    scrape_interval: 60s
+    scrape_timeout: 60s
+    static_configs:
+      - targets: ['10.20.12.55:18094']
+
+  # kubernetes
+  - job_name: kubernetes-cadvisor
+    honor_labels: true
+    scrape_interval: 60s
+    scrape_timeout: 60s
+    metrics_path: /federate
+    params:
+      match[]:
+        - '{job="kubernetes-cadvisor"}'
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/kubernetes/*.json']
+        refresh_interval: 60s
+
+  - job_name: kubernetes-kubelet
+    honor_labels: true
+    scrape_interval: 60s
+    scrape_timeout: 60s
+    metrics_path: /federate
+    params:
+      match[]:
+        - '{job="kubernetes-kubelet"}'
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/kubernetes/*.json']
+        refresh_interval: 60s
+
+  - job_name: kubernetes-service-endpoints
+    honor_labels: true
+    scrape_interval: 60s
+    scrape_timeout: 60s
+    metrics_path: /federate
+    params:
+      match[]:
+        - '{job="kubernetes-service-endpoints"}'
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/kubernetes/*.json']
+        refresh_interval: 60s
+
+  - job_name: kubernetes-node-exporter
+    honor_labels: true
+    scrape_interval: 60s
+    scrape_timeout: 60s
+    metrics_path: /federate
+    params:
+      match[]:
+        - '{job="kubernetes-node-exporter"}'
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/kubernetes/*.json']
+        refresh_interval: 60s
+
+  # node_exporter
+  - job_name: 'node_exporter'
+    scrape_interval: 30s
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/node/*.json']
+      - files: ['/home/cmp/prometheus/openstack/*.json']
+
+  # libvirt_exporter
+  - job_name: 'libvirt_exporter'
+    metrics_path: /libvirt/metrics
+    scrape_interval: 30s
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/openstack/*.json']
+
+  # ipmi_exporter
+  - job_name: 'ipmi_exporter'
+    params:
+      module: [default]
+    scrape_interval: 1m
+    scrape_timeout: 30s
+    metrics_path: /ipmi
+    scheme: http
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/ipmi/*.json']
+    relabel_configs:
+    - source_labels: [__address__]
+      separator: ;
+      regex: (.*)
+      target_label: __param_target
+      replacement: ${1}
+      action: replace
+    - source_labels: [__param_target]
+      separator: ;
+      regex: (.*)
+      target_label: instance
+      replacement: ${1}
+      action: replace
+    - source_labels: [module]
+      separator: ;
+      regex: (.*)
+      target_label: __param_module
+      replacement: ${1}
+      action: replace
+    - separator: ;
+      regex: .*
+      target_label: __address__
+      replacement: 10.20.12.55:9290
+      action: replace
+
+# xsky
+  - job_name: xsky
+    honor_labels: true
+    scrape_interval: 30s
+    scrape_timeout: 30s
+    metrics_path: /federate
+    params:
+      match[]:
+        - '{job="volume"}'
+        - '{job="pool"}'
+        - '{job="disk"}'
+        - '{job="host"}'
+        - '{job="s3_load_balancer"}'
+        - '{job="object_storage"}'
+        - '{job="fs_folder "}'
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/xsky/*.json']
+        refresh_interval: 60s
+
+  # kafka_exporter
+  - job_name: 'kafka_exporter'
+    scrape_interval: 60s
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/kafka/*.json']
+
+  # mysql_exporter
+  - job_name: 'mysql_exporter'
+    scrape_interval: 20s
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/mysql/*.json']
+    metric_relabel_configs:
+    - regex: 'exported_server'
+      action: labeldrop
+
+  # redis_exporter
+  - job_name: 'redis_exporter'
+    scrape_interval: 20s
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/redis/*.json']
+    metric_relabel_configs:
+    - regex: 'exported_server|exported_port'
+      action: labeldrop
+
+  # mongodb_exporter
+  - job_name: 'mongodb_exporter'
+    scrape_interval: 20s
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/mongodb/*.json']
+    metric_relabel_configs:
+    - regex: 'exported_hostname'
+      action: labeldrop
+
+  # sqlserver_exporter
+  - job_name: 'sqlserver_exporter'
+    scrape_interval: 20s
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/sqlserver/*.json']
+    metric_relabel_configs:
+    - source_labels: [exported_instance]
+      target_label: case
+      action: replace
+    - regex: 'exported_hostname|exported_instance'
+      action: labeldrop
+
+  # memcached_exporter
+  - job_name: 'memcached_exporter'
+    scrape_interval: 20s
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/memcached/*.json']
+
+  # postgresql_exporter
+  - job_name: 'postgresql_exporter'
+    scrape_interval: 20s
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/postgresql/*.json']
+
+  # zookeeper_exporter
+  - job_name: 'zookeeper_exporter'
+    scrape_interval: 20s
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/zookeeper/*.json']
+
+  # rabbitmq_exporter
+  - job_name: 'rabbitmq_exporter'
+    scrape_interval: 20s
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/rabbitmq/*.json']
+
+  # etcd_exporter
+  - job_name: 'etcd_exporter'
+    scrape_interval: 20s
+    file_sd_configs:
+      - files: ['/home/cmp/prometheus/etcd/*.json']

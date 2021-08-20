@@ -10,14 +10,23 @@
         <module name="spring-02-hellospring" />
         <module name="spring-04-DI" />
         <module name="spring-06-annoction" />
-        <module name="spring-07-javaconfig" />
-        <module name="spring-09-aop" />
+        <module name="springmvc-02-hellomvc" />
         <module name="spring-11-transaction" />
-        <module name="spring-10-mybaits" />
+        <module name="springmvc-04-controller" />
+        <module name="ssm" />
         <module name="spring-05-autowired" />
         <module name="spring-03-ioc-create" />
-        <module name="springmvc-01-servlet" />
         <module name="spring-08-proxy" />
+        <module name="springmvc-05-json" />
+        <module name="springmvc-04-modelAndView" />
+        <module name="spring-07-javaconfig" />
+        <module name="springmvc-03-annotation" />
+        <module name="spring-09-aop" />
+        <module name="springmvc-02-hellomvc2" />
+        <module name="springmvc-03-myAnnotation" />
+        <module name="spring-10-mybaits" />
+        <module name="springmvc-02-myMvc" />
+        <module name="springmvc-01-servlet" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -35,6 +44,15 @@
       <module name="spring_mvc" target="1.8" />
       <module name="spring_parent" target="1.8" />
       <module name="springmvc-01-servlet" target="1.8" />
+      <module name="springmvc-02-hellomvc" target="1.8" />
+      <module name="springmvc-02-hellomvc2" target="1.8" />
+      <module name="springmvc-02-myMvc" target="1.8" />
+      <module name="springmvc-03-annotation" target="1.8" />
+      <module name="springmvc-03-myAnnotation" target="1.8" />
+      <module name="springmvc-04-controller" target="1.8" />
+      <module name="springmvc-04-modelAndView" target="1.8" />
+      <module name="springmvc-05-json" target="1.8" />
+      <module name="ssm" target="1.8" />
       <module name="untitled" target="1.8" />
     </bytecodeTargetLevel>
   </component>

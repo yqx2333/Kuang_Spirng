@@ -11,8 +11,18 @@
         https://www.springframework.org/schema/aop/spring-aop.xsd
         http://www.springframework.org/schema/mvc
         https://www.springframework.org/schema/mvc/spring-mvc.xsd">
-    <!-- Spring核心配置文件 -->
 
+    <!-- 注解驱动 -->
+    <mvc:annotation-driven />
+    <!-- 静态资源过滤 -->
+    <mvc:default-servlet-handler />
+    <!-- 扫描包 -->
+    <context:component-scan base-package="com.yqx" />
+
+    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+        <property name="suffix" value=".jsp" />
+        <property name="prefix" value="/WEB-INF/jsp/" />
+    </bean>
 
 
 

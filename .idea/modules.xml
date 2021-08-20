@@ -16,6 +16,15 @@
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/spring_mvc.iml" filepath="$PROJECT_DIR$/spring_mvc/spring_mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_parent/spring_parent.iml" filepath="$PROJECT_DIR$/spring_parent/spring_parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-01-servlet/springmvc-01-servlet.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-01-servlet/springmvc-01-servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc/springmvc-02-hellomvc.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc/springmvc-02-hellomvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc2/springmvc-02-hellomvc2.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc2/springmvc-02-hellomvc2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-02-myMvc/springmvc-02-myMvc.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-02-myMvc/springmvc-02-myMvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-03-annotation/springmvc-03-annotation.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-03-annotation/springmvc-03-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-03-myAnnotation/springmvc-03-myAnnotation.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-03-myAnnotation/springmvc-03-myAnnotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-04-controller/springmvc-04-controller.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-04-controller/springmvc-04-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-04-modelAndView/springmvc-04-modelAndView.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-04-modelAndView/springmvc-04-modelAndView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-05-json/springmvc-05-json.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-05-json/springmvc-05-json.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mvc/ssm/ssm.iml" filepath="$PROJECT_DIR$/spring_mvc/ssm/ssm.iml" />
     </modules>
   </component>
 </project>

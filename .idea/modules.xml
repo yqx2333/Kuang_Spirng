@@ -13,11 +13,13 @@
       <module fileurl="file://$PROJECT_DIR$/spring_parent/spring-09-aop/spring-09-aop.iml" filepath="$PROJECT_DIR$/spring_parent/spring-09-aop/spring-09-aop.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_parent/spring-10-mybaits/spring-10-mybaits.iml" filepath="$PROJECT_DIR$/spring_parent/spring-10-mybaits/spring-10-mybaits.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_parent/spring-11-transaction/spring-11-transaction.iml" filepath="$PROJECT_DIR$/spring_parent/spring-11-transaction/spring-11-transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_boot/spring_boot.iml" filepath="$PROJECT_DIR$/spring_boot/spring_boot.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/spring_mvc.iml" filepath="$PROJECT_DIR$/spring_mvc/spring_mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_parent/spring_parent.iml" filepath="$PROJECT_DIR$/spring_parent/spring_parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-01-servlet/springmvc-01-servlet.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-01-servlet/springmvc-01-servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc/springmvc-02-hellomvc.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc/springmvc-02-hellomvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc2/springmvc-02-hellomvc2.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc2/springmvc-02-hellomvc2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc3/springmvc-02-hellomvc3.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc3/springmvc-02-hellomvc3.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-02-myMvc/springmvc-02-myMvc.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-02-myMvc/springmvc-02-myMvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-03-annotation/springmvc-03-annotation.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-03-annotation/springmvc-03-annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-03-myAnnotation/springmvc-03-myAnnotation.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-03-myAnnotation/springmvc-03-myAnnotation.iml" />

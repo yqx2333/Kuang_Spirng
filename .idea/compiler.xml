@@ -11,6 +11,7 @@
         <module name="spring-04-DI" />
         <module name="spring-06-annoction" />
         <module name="springmvc-02-hellomvc" />
+        <module name="springmvc-02-hellomvc3" />
         <module name="spring-11-transaction" />
         <module name="springmvc-04-controller" />
         <module name="ssm" />
@@ -47,6 +48,7 @@
       <module name="springmvc-01-servlet" target="1.8" />
       <module name="springmvc-02-hellomvc" target="1.8" />
       <module name="springmvc-02-hellomvc2" target="1.8" />
+      <module name="springmvc-02-hellomvc3" target="1.8" />
       <module name="springmvc-02-myMvc" target="1.8" />
       <module name="springmvc-03-annotation" target="1.8" />
       <module name="springmvc-03-myAnnotation" target="1.8" />

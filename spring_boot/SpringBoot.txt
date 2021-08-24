@@ -1,0 +1,148 @@
+SpringBoot:
+    学习路线:
+        是什么? yml配置文件; 自动装配原理; 集成web开发; 集成数据库Druid; 分布式开发Dubbo+zookeeper;
+        接口文档swagger; 任务调度;  安全springSecurity;
+SpringCloud:
+    Restful风格,Eureka,负载均衡nginx,Ribbon,Feign,HyStrix;Zuul,SpringCloudConfig;
+
+Spring是为了解决企业级应用开发的复杂性而创建的;
+============================================================================================
+
+原理:
+    1. pom.xml
+        SpringBoot的核心依赖在父工程中;
+        引入SpringBoot依赖的时候,不需要指定版本;
+    2. 启动器:
+        说白了就是SpringBoot的启动场景;
+        spring-boot-starter-web 会自动导入web环境所有的依赖;
+        springBoot会将所有的功能场景,都变成一个个的启动器;
+        需要什么功能,找到对应的启动器就可以了,也就是一个个starter;
+
+    3. 主程序 @SpringBootApplication;
+        @SpringBootApplication -> 标注这个类是一个SpringBoot应用; 启动类下所有的资源被导入;
+        @SpringBootConfiguration -> SpringBoot的配置;
+            @Configuration  -> 配置类;
+                @Component  -> 代表这是一个组件;
+        @EnableAutoConfiguration -> 自动配置;
+            @AutoConfigurationPackage -> 自动配置包;
+                @Import(AutoConfigurationPackages.Registrar.class) -> 导入选择器(包选择)
+            @Import(AutoConfigurationImportSelector.class) -> 自动配置导入选择
+    SpringBoot所有的自动配置都是在启动的时候扫描并加载,所有的自动配置类都在这里;
+    META-INF/spring.factories; 要判断条件是否成立,只要导入了对应的starter,就有了对应的启动器,自动配置就会生效;
+
+        运行:
+            1. springBoot在启动的时候,会从类路径META-INF/spring.factories下拿到指定的值;
+            2. 将自动配置类导入容器,自动配置就会生效,进行自动配置;
+            3. 整合JavaEE,解决方案和自动配置的东西都在 spring-boot-autoconfigure.jar包下;
+            4. 所有需要导入的组件,会以全限定类名的方式返回,并添加到容器中;
+            5. 容器中也会存在xxxAutoConfiguration文件,就是这些类给容器中导入了所有需要的所有组件;Bean自动配置;
+            6. 有了自动配置类,也就免去了自己配置的关系;
+
+    4. 主程序启动类;
+        SpringApplication类;
+            1. 推断是普通项目还是web项目;也就是是否有web依赖;
+            2. 推断主类;
+            3. run方法中有很多监听器;
+        run方法;
+
+============================================================================================
+
+SpringBoot配置文件;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

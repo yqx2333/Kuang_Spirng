@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring_boot/spring_boot.iml" filepath="$PROJECT_DIR$/spring_boot/spring_boot.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/spring_mvc.iml" filepath="$PROJECT_DIR$/spring_mvc/spring_mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_parent/spring_parent.iml" filepath="$PROJECT_DIR$/spring_parent/spring_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_boot/springboot-01-start/springboot-01-start.iml" filepath="$PROJECT_DIR$/spring_boot/springboot-01-start/springboot-01-start.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-01-servlet/springmvc-01-servlet.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-01-servlet/springmvc-01-servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc/springmvc-02-hellomvc.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc/springmvc-02-hellomvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc2/springmvc-02-hellomvc2.iml" filepath="$PROJECT_DIR$/spring_mvc/springmvc-02-hellomvc2/springmvc-02-hellomvc2.iml" />

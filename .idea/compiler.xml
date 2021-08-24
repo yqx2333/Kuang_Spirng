@@ -8,27 +8,34 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-01-ioc" />
         <module name="spring-02-hellospring" />
-        <module name="spring-04-DI" />
         <module name="spring-06-annoction" />
-        <module name="springmvc-02-hellomvc" />
         <module name="springmvc-02-hellomvc3" />
-        <module name="spring-11-transaction" />
         <module name="springmvc-04-controller" />
         <module name="ssm" />
+        <module name="spring-08-proxy" />
+        <module name="springmvc-03-annotation" />
+        <module name="spring-09-aop" />
+        <module name="springmvc-03-myAnnotation" />
+        <module name="springmvc-02-myMvc" />
+        <module name="springmvc-01-servlet" />
+        <module name="spring-04-DI" />
+        <module name="springmvc-02-hellomvc" />
+        <module name="spring_boot" />
+        <module name="spring-11-transaction" />
         <module name="spring-05-autowired" />
         <module name="spring-03-ioc-create" />
-        <module name="spring-08-proxy" />
         <module name="springmvc-05-json" />
         <module name="springmvc-04-modelAndView" />
         <module name="spring-07-javaconfig" />
         <module name="springmvc-06-ajax" />
-        <module name="springmvc-03-annotation" />
-        <module name="spring-09-aop" />
         <module name="springmvc-02-hellomvc2" />
-        <module name="springmvc-03-myAnnotation" />
         <module name="spring-10-mybaits" />
-        <module name="springmvc-02-myMvc" />
-        <module name="springmvc-01-servlet" />
+      </profile>
+      <profile name="Annotation profile for spring-boot-start" enabled="true">
+        <sourceOutputDir name="../spring-boot-start/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../spring-boot-start/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-01-start" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -43,8 +50,10 @@
       <module name="spring-09-aop" target="1.8" />
       <module name="spring-10-mybaits" target="1.8" />
       <module name="spring-11-transaction" target="1.8" />
+      <module name="spring_boot" target="1.8" />
       <module name="spring_mvc" target="1.8" />
       <module name="spring_parent" target="1.8" />
+      <module name="springboot-01-start" target="1.8" />
       <module name="springmvc-01-servlet" target="1.8" />
       <module name="springmvc-02-hellomvc" target="1.8" />
       <module name="springmvc-02-hellomvc2" target="1.8" />

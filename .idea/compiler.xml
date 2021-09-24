@@ -29,6 +29,7 @@
         <module name="spring-07-javaconfig" />
         <module name="springmvc-06-ajax" />
         <module name="springmvc-02-hellomvc2" />
+        <module name="springboot-02-config" />
         <module name="spring-10-mybaits" />
       </profile>
       <profile name="Annotation profile for spring-boot-start" enabled="true">
@@ -54,6 +55,7 @@
       <module name="spring_mvc" target="1.8" />
       <module name="spring_parent" target="1.8" />
       <module name="springboot-01-start" target="1.8" />
+      <module name="springboot-02-config" target="1.8" />
       <module name="springmvc-01-servlet" target="1.8" />
       <module name="springmvc-02-hellomvc" target="1.8" />
       <module name="springmvc-02-hellomvc2" target="1.8" />

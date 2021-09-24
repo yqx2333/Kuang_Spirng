@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-01-ioc/spring-01-ioc.iml" filepath="$PROJECT_DIR$/spring-01-ioc/spring-01-ioc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-02-hellospring/spring-02-hellospring.iml" filepath="$PROJECT_DIR$/spring-02-hellospring/spring-02-hellospring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-03-ioc-create/spring-03-ioc-create.iml" filepath="$PROJECT_DIR$/spring-03-ioc-create/spring-03-ioc-create.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-04-DI/spring-04-DI.iml" filepath="$PROJECT_DIR$/spring-04-DI/spring-04-DI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-05-autowired/spring-05-autowired.iml" filepath="$PROJECT_DIR$/spring-05-autowired/spring-05-autowired.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-06-annoction/spring-06-annoction.iml" filepath="$PROJECT_DIR$/spring-06-annoction/spring-06-annoction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-07-javaconfig/spring-07-javaconfig.iml" filepath="$PROJECT_DIR$/spring-07-javaconfig/spring-07-javaconfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-08-proxy/spring-08-proxy.iml" filepath="$PROJECT_DIR$/spring-08-proxy/spring-08-proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-09-aop/spring-09-aop.iml" filepath="$PROJECT_DIR$/spring-09-aop/spring-09-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-10-mybaits/spring-10-mybaits.iml" filepath="$PROJECT_DIR$/spring-10-mybaits/spring-10-mybaits.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_parent.iml" filepath="$PROJECT_DIR$/spring_parent.iml" />
+    </modules>
+  </component>
+</project>

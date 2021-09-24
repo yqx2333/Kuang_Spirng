@@ -1,0 +1,20 @@
+# 应用名称
+spring:
+  application:
+    name: springboot-02-config
+server:
+  port: 8081
+
+student:
+  name: zhangsan
+  age: 18
+
+person: {name: zhangsan,age: 18}
+
+# 数组
+pets:
+  - cat
+  - dog
+  - pig
+
+pets2: [cat,dog,pig]

@@ -1,0 +1,39 @@
+//宿主机获取性能指标
+CPU|利用率 (%)平均值
+    vsphere_host_cpu_utilization_average{cpu="instance-total"}
+
+CPU|使用情况 (%)平均值
+    vsphere_host_cpu_usage_average{cpu="instance-total"}
+
+CPU|就绪时间(毫秒)平均值
+    vsphere_host_cpu_readiness_average{cpu="instance-total"}
+
+CPU|就绪 (%)平均值
+    vsphere_host_cpu_readiness_average{cpu="instance-total"}
+
+内存|已置备(GB)
+
+内存|使用情况 (%)平均值
+    vsphere_host_mem_usage_average
+
+所有磁盘总延迟 (毫秒)平均值
+所有磁盘总延迟 (毫秒)最高值
+
+所有磁盘内核延迟 (毫秒)平均值
+所有磁盘内核延迟 (毫秒)最高值
+
+所有物理设备延迟 (毫秒)平均值
+所有物理设备延迟 (毫秒)最高值
+
+队列命令延迟 (毫秒)平均值
+    vsphere_host_disk_totalLatency_average
+队列命令延迟 (毫秒)最高值
+
+网络||使用速率mBs最高值
+
+网络|丢弃的已传输数据包总和
+    vsphere_host_net_droppedTx_summation{interface="instance-total"}
+
+网络:每秒传输的数据包数使用速率mBS平均值
+            网络
+    vsphere_host_net_packetsTx_summation{interface="instance-total"}
